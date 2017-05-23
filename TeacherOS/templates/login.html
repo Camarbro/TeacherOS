@@ -48,22 +48,30 @@
                   <h3 class="panel-title">Favor de Inciar Sesion</h3>
               </div>
               <div class="panel-body">
-                  <form role="form">
+                  <form role="form" method="POST">
+                  {% csrf_token %}
                       <fieldset>
                           <div class="form-group">
-                              <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                              <input class="form-control" id="username" placeholder="Username" name="username" type="text" autofocus>
                           </div>
                           <div class="form-group">
-                              <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                              <input class="form-control" id="password" placeholder="password" name="password" type="password" value="">
                           </div>
                           <div class="checkbox">
                               <label>
                                   <input name="remember" type="checkbox" value="Remember Me">Recuerdame
                               </label>
                           </div>
+                          {% if form.errors %}
+                          <div class="alert alert-danger text-center" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            &nbsp; <br> Usuario Contraseña Invalido
+                          </div>
+                          {% endif %}
                           <!-- Change this to a button or input when using this as a form -->
-                          <a href="{% url 'home'%}" class="btn btn-lg btn-success btn-block">Inicar Sesion</a>
-                          <a href="index.html" class="btn btn-lg btn-warning btn-block">Registrate</a>
+                          <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+                          <button type="reset" class="btn btn-lg btn-warning btn-block">Cancel</button>
                       </fieldset>
                   </form>
               </div>

@@ -4,7 +4,7 @@ from django.contrib.auth.views import login, logout_then_login
 
 
 urlpatterns = [
-    url(r'^$', home, name = 'home'),
+    url(r'^$', home.as_view(), name = 'home'),
     url(r'login', login, {'template_name': 'login.html'}, name = 'login'),
     url(r'^logout$', logout_then_login, name = "logout"),
     url(r'^hw_list$', HWView.as_view(), name ="hw" ),

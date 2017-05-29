@@ -21,11 +21,10 @@
     <!-- Custom CSS -->
     <link href="{% static 'dist/css/sb-admin-2.css' %}" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="{% static 'vendor/morrisjs/morris.css' %}" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -95,7 +94,7 @@
                             <a href="{% url 'register_student' %}"><i class="fa fa-user fa-fw"></i> Add Student</a>
                         </li>
                         <li>
-                            <a href="{% url 'register_report' %}"><i class="fa fa-times-circle fa-fw"></i> Add Report</a>
+                            <a href="{% url 'register_report' %}"><i class="fa fa-times-circle fa-fw"></i> Add Citation</a>
                         </li>
                         <li>
                             <a href="{% url 'register_class' %}"><i class="fa fa-book fa-fw"></i> Add Class</a>
@@ -156,19 +155,11 @@
     </div>
     {% endif %}
 
-    <!-- jQuery -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="{% static 'vendor/metisMenu/metisMenu.min.js' %}"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="{% static 'vendor/raphael/raphael.min.js' %}"></script>
-    <script src="{% static 'vendor/morrisjs/morris.min.js' %}"></script>
-    <script src="{% static 'data/morris-data.js' %}"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
